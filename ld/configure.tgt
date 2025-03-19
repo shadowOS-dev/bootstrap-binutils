@@ -1098,6 +1098,16 @@ loongarch64-*)		targ_emul=elf64loongarch
 *-*-ieee*)		targ_emul=vanilla
 			targ_extra_ofiles=
 			;;
+
+i[3-7]86-*-shadowOS*)
+			targ_emul=elf_i386_shadowOS
+			targ_extra_emuls=elf_i386
+			targ64_extra_emuls="elf_x86_64_shadowOS elf_x86_64"
+			;;
+x86_64-*-shadowOS*)
+			targ_emul=elf_x86_64_shadowOS
+			targ_extra_emuls="elf_i386_shadowOS elf_x86_64 elf_i386"
+			;;
 *)
   echo 2>&1 "*** ld does not support target ${targ}"
   echo 2>&1 "*** see ld/configure.tgt for supported targets"

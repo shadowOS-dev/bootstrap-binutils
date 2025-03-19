@@ -372,7 +372,8 @@ ALL_EMULATION_SOURCES = \
 	exgateelf.c \
 	ez80.c \
 	ez8001.c \
-	ez8002.c
+	ez8002.c \
+	eelf_i386_shadowOS.c
 
 ALL_EMULATIONS = $(ALL_EMULATION_SOURCES:.c=.@OBJEXT@)
 
@@ -467,7 +468,8 @@ ALL_64_EMULATION_SOURCES = \
 	eelf_x86_64_sol2.c \
 	ehppa64linux.c \
 	ei386pep.c \
-	emmo.c
+	emmo.c \
+	eelf_x86_64_shadowOS.c
 
 ALL_64_EMULATIONS = $(ALL_64_EMULATION_SOURCES:.c=.@OBJEXT@)
 
